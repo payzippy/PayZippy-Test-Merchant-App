@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TestMerc</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="pay_method">Payment Method</string>
+    <string name="mtid">Merchant Transaction Id</string>
+    <string name="email">Buyer E-mail Address</string>
+    <string name="amount">Transaction Amount</string>
+    <string name="ui_mode">Choose a UI Mode:</string>
+    <string name="payment_method">Choose a Payment Method:</string>
+    <string name="hash_method">Choose a Hash Method:</string>
+
+    <string-array name="ui_mode">
+        <item>REDIRECT</item>
+        <item>IFRAME</item>
+    </string-array>
+    <string-array name="payment_method">
+        <item>CREDIT</item>
+        <item>DEBIT</item>
+        <item>NET</item>
+        <item>EMI</item>
+        <item>PAYZIPPY</item>
+    </string-array>
+    <string-array name="hash_method">
+        <item>SHA256</item>
+        <item>MD5</item>
+    </string-array>
+
+</resources>
