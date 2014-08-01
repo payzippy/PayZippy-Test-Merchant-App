@@ -96,6 +96,8 @@ public class ChargingForm extends Activity
 					cr.setItemTotal("");
 					cr.setItemVertical("");
 					// ****************************************************************************************
+					// DO NOT use the below method to generate hash. This is just for example pupose. Please
+					// send all the request params to your server and get back hash. Do NOT keep the secret key in you app.
 					String hashMe = GenerateHash.hash(cr.getRequestParams());
 					cr.setHash(hashMe);
 
@@ -127,7 +129,8 @@ public class ChargingForm extends Activity
 			// generate Hash from server after sending all the parameters to the server to check for Hash Mismatch
 			// errors. Payment here may or may not be successful.
 
-			// Hash should be generated in your server. Do NOT keep your secret key in you app.
+			// // DO NOT use the below method to generate hash. This is just for example pupose. Please
+			// send all the request params to your server and get back hash. Do NOT keep the secret key in you app.
 			String calculatedHash = GenerateHash.hash(responseParams);
 			if (calculatedHash.equalsIgnoreCase(responseParams.get("hash")))
 			{
