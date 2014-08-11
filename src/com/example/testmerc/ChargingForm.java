@@ -46,7 +46,7 @@ public class ChargingForm extends Activity
 
 					// Set mandatory parameters. These methods are in ChargingRequest.java.
 					// These values can be set once which need not be changed.
-					// Below 2 are Merchant Specific values.
+					// Below 3 are Merchant Specific values. Please get below credentials from PayZippy team.
 					cr.setMerchantId("Enter Your Merchant Id");
 					cr.setMerchantKeyId("Enter Your Merchant Key Id");
 					cr.setCallbackUrl("Enter your callback url");
@@ -96,7 +96,7 @@ public class ChargingForm extends Activity
 					cr.setItemTotal("");
 					cr.setItemVertical("");
 					// ****************************************************************************************
-					// DO NOT use the below method to generate hash. This is just for example pupose. Please
+					// DO NOT use the below method to generate hash. This is just for example purpose. Please
 					// send all the request params to your server and get back hash. Do NOT keep the secret key in you app.
 					String hashMe = GenerateHash.hash(cr.getRequestParams());
 					cr.setHash(hashMe);
@@ -129,7 +129,7 @@ public class ChargingForm extends Activity
 			// generate Hash from server after sending all the parameters to the server to check for Hash Mismatch
 			// errors. Payment here may or may not be successful.
 
-			// // DO NOT use the below method to generate hash. This is just for example pupose. Please
+			// // DO NOT use the below method to generate hash. This is just for example purpose. Please
 			// send all the request params to your server and get back hash. Do NOT keep the secret key in you app.
 			String calculatedHash = GenerateHash.hash(responseParams);
 			if (calculatedHash.equalsIgnoreCase(responseParams.get("hash")))
